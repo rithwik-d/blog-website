@@ -159,7 +159,11 @@ app.delete("/posts/:id", (req, res) => {
 
 app.use((req, res) => renderNotFound(res, "The page you requested does not exist."));
 
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Blog app is running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    // eslint-disable-next-line no-console
+    console.log(`Blog app is running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

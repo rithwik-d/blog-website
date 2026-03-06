@@ -38,3 +38,7 @@ For auto-reload during development:
 ```bash
 npm run dev
 ```
+
+## GitHub Pages Version
+
+This repository also includes a static GitHub Pages version under `docs/` with client-side CRUD behavior.
